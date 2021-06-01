@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<data>
+    <code>0</code>
+    <persons>
+        <person>
+            <name>鹿晗</name>
+            <age>31</age>
+        </person>
+         <person>
+            <name>蔡徐坤</name>
+            <age>26</age>
+        </person>
+    </persons>
+
+</data>

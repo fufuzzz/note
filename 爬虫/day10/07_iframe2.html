@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            float: left;
+            height: 600px;
+        }
+        div:nth-child(1){
+            width: 10%;
+            border: 1px solid blue;
+        }
+        div:nth-child(2){
+            width: 40%;
+            border: 1px solid #ff0000;
+        }
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- iframe 是html 文档中的一个框架, 可以让当前页面嵌套另外一个页面或者是网站-->
+
+<div>
+    <ur>
+        <li><a href="html/a.html" target="abc">aa</a> </li>
+        <li><a href="html/b.html" target="abc">bb</a> </li>
+        <li><a href="html/c.html" target="abc">cc</a> </li>
+    </ur>
+
+<!--    <iframe src="https://www.sina.com" frameborder="0"></iframe>-->
+</div>
+<div>
+    <iframe src="https://www.qq.com" frameborder="0" name="abc"></iframe></div>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+return jsonify({"confirm":data[0],"suspect":data[1],"heal":data[2],"dead":data[3]})
+
+
+
+ ps -ef|grep gunicorn
+
+
+
+#ptab-1 > div.Virus_1-1-302_2SKAfr > div.Common_1-1-302_3lDRV2 > span

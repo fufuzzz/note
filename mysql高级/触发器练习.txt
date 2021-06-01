@@ -1,0 +1,20 @@
+CREATE TABLE `tb_user` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `totalprice` decimal(10,2) NOT NULL DEFAULT '0.00',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `tb_user` VALUES (1, '张三', 0);
+INSERT INTO `tb_user` VALUES (2, '李四', 0);
+
+
+
+# type = 1 表示充值， =2表示消费
+CREATE TABLE `tb_record` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `uid` int NOT NULL,
+  `type` tinyint NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

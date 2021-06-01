@@ -1,0 +1,5 @@
+1、获取 汽车之家 新闻列表的数据，网址 https://www.autohome.com.cn/all/#pvareaid=3311230，用bs4 获取 第一页 新闻的  标题、作者、发布时间、新闻内容的所有图片链接(列表表示)
+
+
+2、利用 多线程 下载 糗事百科热图 网址的 前6页的图片，https://www.qiushibaike.com/imgrank/，alt属性作为图片名称。 创建相同的页名目录，保存对应页的图片
+

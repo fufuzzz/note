@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        .one{
+            width: 80px;
+            height: 60px;
+            background: red;
+            float: left;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 60px;;
+        }
+        .two{
+            margin: 0;
+            padding: 0;
+            display: none;
+        }
+        .two li{
+            width: 80px;
+            height: 60px;
+            background: skyblue;
+        }
+        #li:hover .two{
+            display: block;
+        }
+        /*div > p{*/
+        /*    color: red;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+<ul class="main">
+    <li class="one">文字1</li>
+    <li class="one" id="li">
+        文字2
+        <ul class="two">
+            <li >文字21</li>
+            <li >文字22</li>
+            <li >文字23</li>
+            <li >文字24</li>
+        </ul>
+    </li>
+    <li class="one">文字3</li>
+    <li class="one">文字4</li>
+</ul>
+
+<!--<div>-->
+<!--    <p>aaaa-->
+<!--    </p>-->
+<!--    <span>-->
+<!--        <p>bbbbb</p>-->
+<!--    </span>-->
+<!--</div>-->
+
+</body>
+</html>

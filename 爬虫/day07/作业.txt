@@ -1,0 +1,4 @@
+1、爬取 51job 数据分析 第一页岗位信息。  网址 https://search.51job.com/list/040000,000000,0000,00,9,99,%25E6%2595%25B0%25E6%258D%25AE%25E5%2588%2586%25E6%259E%2590,2,1.html?lang=c&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&ord_field=0&dibiaoid=0&line=&welfare=
+爬取 职位标题，公司名称，多少年经验，职位信息(在内容页)
+
+2、爬取 链家二手房 前5页的信息， 网址 https://sz.lianjia.com/ershoufang/， 爬取  二手房标题，位置，几室几厅，多少平米，参考价，单价

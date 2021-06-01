@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // 作业1
+    for (var i = 1; i <= 9; i++) {
+        for (var j = 1; j <= i; j++) {
+            document.write(`${i}*${j}=${i * j}&nbsp;&nbsp;`)
+
+        }
+        document.write('<br>')
+
+    }
+    // 作业2
+    var j = 0
+    for (var i = 1; i <= 100; i++) {
+        j += ((-1) ** (i - 1)) / i
+    }
+    document.write(j)
+
+    // 作业3
+    var s = 0
+    for (var i = 1; i <= 5; i++) {
+        var n = 1
+        for (var j = i; j >= 1; j--) {
+            n *= j
+        }
+        s += n
+    }
+    document.write('<br>')
+    document.write(s)
+    document.write('<br>')
+
+    var create_table = function (a,b){
+        var s = "<table>"
+        for (var i=1; i<=a; i++){
+            s +='<tr>'
+            for (var j=1; j<=b; j++){
+                s += '<td></td>'
+            }
+            s += '</tr>'
+        }
+        s += "</table>"
+        console.log(s)
+    }
+    create_table(3,4)
+
+    var str = 'border-left-width'
+    var arr = str.split("-", 3)
+    for (var i in arr) {
+        arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1)
+    }
+    document.write(arr.join(''))
+
+</script>
+
+</body>
+</html>

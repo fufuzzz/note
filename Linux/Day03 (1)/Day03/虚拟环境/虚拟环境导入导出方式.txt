@@ -1,0 +1,8 @@
+
+
+
+导出虚拟环境的包到文件：
+  pip freeze > requirements.txt
+  
+将文件中的所有包导入到虚拟环境：
+  pip install -r requirements.txt

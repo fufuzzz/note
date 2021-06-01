@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [8,2,7,1,5,6]
+    // arr.sort(function (a,b){return a-b})
+    // console.log(arr[0])
+    // console.log(arr[arr.length-1])
+    a = arr[arr.length-1]
+    arr[arr.length-1] = arr[0]
+    arr[0] = a
+    console.log(arr)
+
+
+    var arr2 = ['one', 'two','Three']
+    var arr3 = new Array()
+    for (var i in arr2){
+        arr3.push(arr2[i])
+    }
+    arr2.reverse()
+    for (var j in arr2){
+        arr3.push(arr2[j])
+    }
+    console.log(arr3)
+
+    var arr4 = [6,4,7,2,5,8]
+    var b =10
+    for (var m in arr4){
+        for (var n=m; n<arr4.length; n++){
+            if (arr4[m]+arr4[n] == b){
+                console.log(arr4[m]+','+arr4[n])
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

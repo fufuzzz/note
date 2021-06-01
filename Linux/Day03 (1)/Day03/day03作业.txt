@@ -1,0 +1,54 @@
+
+
+作业
+作业1：
+1. 创建一个hello.py文件
+	touch hello.py
+2. 给hello.py添加可执行权限，修改文件的权限：本用户可读可写可执行，同组用户只读
+其他用户什么都干不了。
+	chmod 740 hello.py
+3. 执行该hello.py文件
+	python hello.py
+4. 修改该文件所有者，修改为user1，修改文件的所在组，修改user2
+	chown user1 hello.py
+	chgrp user2 hello.py
+5. 自行测试修改的权限是否正确
+	ls -l
+
+作业2
+1. 查看当前Ubuntu的系统时间
+	date
+2. 把命令cal执行后看到的结果存放到 cal.txt文件中
+	cal > cal.txt
+3. 创建一个文件 test.txt，修改其权限为 所有者可读可写，其他人没有任何权限
+	touch test.txt
+	chmod 600 test.txt
+4. 创建一个叫xiaohua的用户，然后创建一个新的用户组叫nba，并将xiaohua用户添加到这个用户组中，然后创建一个新的文件，名字叫molei.py，并修它的用户组为nba
+	useradd xiaohua -m -d /home/xiaohua 
+	groupadd nba
+	usermod -g nba
+	touch molei.py
+	chgrp nba molei.py
+
+作业3. 
+安装虚拟环境
+    1. 更新软件源: apt update
+    2. 安装虚拟环境：pip install virtualenv virtualenvwrapper
+		
+    3. 然后需要配置环境变量
+        3.1, 进入root目录: cd /root
+        3.2, 使用vim打开.bashrc文件(sudo vim .bashrc), 定位到最后:shift+g，并添加以下代码
+	export WORKON_HOME=/root/.virtualenvs
+	source /usr/local/bin/virtualenvwrapper.sh
+		
+        3.3, 在root目录创建.virtualenvs目录(用于存放虚拟环境文件): mkdir .virtualenvs
+        3.4, 加载修改后的设置，使之生效：source .bashrc
+	（假如/如果 出现错误:找不到virtualenvwrapper.sh, 则将路径改成/usr/share/virtualenvwrapper/virtualenvwrapper.sh）
+			
+    4. 创建虚拟环境:  
+         mkvirtualenv env1
+    5. 查看虚拟环境
+         workon
+
+作业4
+注册github账号， http://www.github.com

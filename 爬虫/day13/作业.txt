@@ -1,0 +1,8 @@
+用 scrapy 的 规则爬虫，爬取 链家深圳二手房 所有 分页中  所有房源的 标题、地址、几室几厅、多少平米。保存在 mysql 数据库中 
+
+做完后，再改成用 scrapy_redis 爬取
+
+网址：https://sz.lianjia.com/ershoufang/
+
+
+ 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36'

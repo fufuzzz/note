@@ -1,0 +1,12 @@
+1.用 selenium 爬取 豆瓣 剧情电影排行榜的 前100部电影的 电影名称、封面url，评分
+
+网址：https://movie.douban.com/typerank?type_name=%E5%89%A7%E6%83%85&type=11&interval_id=100:90&action=
+
+提示：要模拟滚动条往下滚动，js的方法 window.scrollBy(向右滚动像素，向下滚动像素)
+
+
+
+
+2.用scrapy爬取 豆瓣电影排行榜 页面的 每个电影的标题、封面url，评分。用json写入到文件中
+
+网址：https://movie.douban.com/chart

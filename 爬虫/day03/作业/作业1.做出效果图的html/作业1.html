@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .div2{
+            float: left;
+        }
+        .div3{
+            float: right;
+        }
+        .div1{
+            width: 1760px;
+            background: orange;
+            margin-left: 40px;
+            padding-top: 58px;
+            padding-bottom: 70px;
+            padding-left: 25px;
+            padding-right: 25px;
+
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        .two{
+            padding: 0;
+            margin: 0;
+
+        }
+        .two li{
+            background: #ffffff;
+            color: black;
+            display: none;
+        }
+
+        li{
+            width: 180px;
+            height: 80px;
+            background: black;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            line-height: 80px;
+            float: left;
+            margin: 0.5px;
+        }
+
+        .one:hover{
+            color:  orange;
+        }
+
+        .one:hover .two li{
+            display: block;
+        }
+        .div4{
+            background-image: url("./img/1_06.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-attachment: scroll;
+            width: 1810px;
+            height: 1000px;
+            margin-top: 90px;
+            margin-left: 40px ;
+        }
+    </style>
+
+</head>
+<body>
+
+<div style="width: 1850px">
+    <div class="div1">
+        <div class="div2">
+            <img src="./img/1_03.png" alt="">
+        </div>
+
+        <div class="div3">
+            <input type="text" placeholder="搜索...">
+        </div>
+    </div>
+
+
+    <ul>
+        <li class="one">
+            集团介绍
+            <ul class="two">
+                <li>马云</li>
+                <li>马化腾</li>
+                <li>马明哲</li>
+                <li>马斯克</li>
+            </ul>
+        </li>
+        <li>集团介绍</li>
+        <li>集团介绍</li>
+        <li>集团介绍</li>
+        <li>集团介绍</li>
+        <li>集团介绍</li>
+        <li>集团介绍</li>
+        <li>集团介绍</li>
+        <li>集团介绍</li>
+        <li>集团介绍</li>
+    </ul>
+    <div class="div4">
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" value="发送验证码" id="send">
+
+<script>
+
+    // var timer = setInterval(function (){
+    //     console.log("每隔一秒执行一次")
+    // }, 1000);  // 毫秒 单位
+    //
+    // var timer2 = setTimeout(function (){
+    //     console.log("一秒后执行一次")
+    // }, 1000)
+    // 1,找到按钮对象,然后赋值一个点击事件
+    // 通过id找到按钮对象
+    var btn = document.getElementById('send')
+    // console.log(btn)
+    btn.onclick = function (){
+        // 2,写逻辑
+        // 设置元素value属性的值
+        // btn.value = 60
+        var num =  60
+        // 用定时器数字-1
+        setInterval(function (){
+            btn.value = num
+
+        }, 1000)
+
+        if (num==0){
+            btn.value = '发送验证码'
+            clearInterval(t)
+
+        }
+        num--
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+索引作业
+创建新表：
+  user4 (
+      id int primary key auto_increment
+      name varchar(30),  不加索引
+      name2 varchar(30)  加索引
+      age int
+      sex varchar(10)
+  )
+  1. 给这个表插入100万条数据， name和name2值一样
+  2. 分别通过name和name2去查找，计算查找所需时间
+

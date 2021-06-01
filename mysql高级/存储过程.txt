@@ -1,0 +1,87 @@
+#######创建表结构和数据，请执行以下代码
+
+CREATE TABLE STUDENT 
+(   
+ SNO       VARCHAR(3) NOT NULL,   
+ SNAME     VARCHAR(4) NOT NULL, 
+ SSEX      VARCHAR(2) NOT NULL,  
+ SBIRTHDAY DATETIME, 
+ CLASS     VARCHAR(5) 
+);
+
+CREATE TABLE COURSE 
+(  
+ CNO   VARCHAR(5)  NOT NULL,  
+ CNAME VARCHAR(10) NOT NULL, 
+ TNO   VARCHAR(3) NOT NULL 
+);
+
+CREATE TABLE SCORE   
+(  
+ SNO    VARCHAR(3)     NOT NULL,  
+ CNO    VARCHAR(5)     NOT NULL,  
+ DEGREE NUMERIC(10, 1) NOT NULL  
+) ; 
+
+CREATE TABLE TEACHER   
+(  
+ TNO       VARCHAR(3)  NOT NULL,   
+ TNAME     VARCHAR(4)  NOT NULL,   
+ TSEX      VARCHAR(2)  NOT NULL,   
+ TBIRTHDAY DATETIME    NOT NULL,   
+ PROF      VARCHAR(6),   
+ DEPART    VARCHAR(10) NOT NULL  
+);
+
+/*---------------添加主键--------------*/
+ ALTER TABLE STUDENT ADD PRIMARY KEY (SNO); 
+ ALTER TABLE SCORE   ADD PRIMARY KEY (SNO,CNO);  
+ ALTER TABLE COURSE  ADD PRIMARY KEY (CNO);  
+ ALTER TABLE TEACHER ADD PRIMARY KEY (TNO);
+ 
+#--------主键在两张table中的数据类型须一致-------*/
+ ALTER TABLE SCORE   ADD CONSTRAINT FK_SCORE_STUDENT  FOREIGN KEY (SNO) REFERENCES STUDENT(SNO);  
+ ALTER TABLE SCORE   ADD CONSTRAINT FK_SCORE_COURSE   FOREIGN KEY (CNO) REFERENCES COURSE(CNO);  
+ ALTER TABLE COURSE  ADD CONSTRAINT FK_COURSE_TEACHER FOREIGN KEY (TNO) REFERENCES TEACHER(TNO);
+ 
+/*---------------输入记录-------------------*/
+ INSERT INTO STUDENT (SNO,SNAME,SSEX,SBIRTHDAY,CLASS)   
+ VALUES (108 ,'曾华' ,'男' ,'1977-09-01',95033),  
+        (105 ,'匡明' ,'男' ,'1975-10-02',95031),   
+        (107 ,'王丽' ,'女' ,'1976-01-23',95033),  
+        (101 ,'李军' ,'男' ,'1976-02-20',95033),    
+        (109 ,'王芳' ,'女' ,'1975-02-10',95031),  
+        (103 ,'陆君' ,'男' ,'1974-06-03',95031);
+				
+ INSERT INTO TEACHER(TNO,TNAME,TSEX,TBIRTHDAY,PROF,DEPART)   
+ VALUES (804,'李诚','男','1958-12-02','副教授','计算机系'),  
+        (856,'张旭','男','1969-03-12','讲师','电子工程系'),  
+        (825,'王萍','女','1972-05-05','助教','计算机系'),   
+        (831,'刘冰','女','1977-08-14','助教','电子工程系');
+				
+ INSERT INTO COURSE(CNO,CNAME,TNO)
+ VALUES ('3-105' ,'计算机导论',825),  
+				('3-245' ,'操作系统' ,804), 
+				('6-166' ,'数据电路' ,856),  
+				('9-888' ,'高等数学' ,831); 
+				
+ INSERT INTO SCORE(SNO,CNO,DEGREE)
+ VALUES (103,'3-245',86),(105,'3-245',75), 
+			  (109,'3-245',68),(103,'3-105',92),  
+			  (105,'3-105',58),(109,'3-105',46), 
+			  (101,'3-105',64),(107,'3-105',91),  
+			  (108,'3-105',78),(101,'6-166',85),  
+			  (107,'6-166',79),(108,'6-166',81); 
+
+
+
+问题：
+1、创建一个存储过程ppt1，根据班级编号，统计该班人数,还统计该班每门课程平均分，并执行存储过程
+
+2、创建一个存储过程ppt2，根据给定的学生姓名返回该学生的学号和成绩。 
+
+3、创建一个存储过程ppt3，根据给定的学号和课程号，将他这门课不及格成绩改为60分，并显示出学号，课程号，成绩。 
+
+4、创建一个存储过程ppt4，检索成绩低于课程‘3-105’平均分的学生的学号，姓名，课程名，成绩
+
+5、创建一个存储过程ppt5，能根据用户输入的课程号，输出该课程平均分，最高分，最低分到三个参数变量中，以供其它程序使用

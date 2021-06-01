@@ -1,0 +1,17 @@
+1. 以下二叉树 前序遍历 的顺序是?   a b e f d
+      a 
+     /  \
+   b   d
+ /  \
+e    f
+
+
+
+2.某二叉树的前序序列为a  bcd  efg，中序序列为dcb a efg，该二叉树的后序序列为?
+
+    	 		a
+		b		e
+	c				f
+d						g
+
+dcbefga

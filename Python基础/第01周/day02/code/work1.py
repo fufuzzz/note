@@ -1,0 +1,5 @@
+# 练习:分别输入2个数, 输出这2个数的和(+),乘积(*)
+num1 = int(input("请输入一个数"))
+num2 = int(input("请输入另外一个数"))
+print('两个数的和:', num1 + num2, sep='')
+print('两个数的积:', num1 * num2, sep='')
